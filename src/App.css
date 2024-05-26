@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(255, 255, 255);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+  background-color: rgb(216, 222, 224);
+  height: 100vh;
+  width: 60vw;
+  border-radius: 10px;
+  margin-left: 20%;
+  
+  /* padding-top: 20px; */
+  box-sizing: border-box;
+  overflow:auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.count{
+  
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  height: 10vh;
+  padding:  20px 20px 0px 20px;
+  width: 60vw;
+  background-color: rgb(216, 222, 224);
+  /* position: absolute; */
+  box-shadow: 1px 1px 15px black;
+  top: 0px; 
+  position:sticky;
+}
+.count h5{
+  /* font-size:medium; */
+  background-color: rgb(255, 255, 255);
+  height: 26px;
+  padding-left: 3%;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  width: 20%;
+}
+.empty{
+  font-weight: bolder;
+  padding-left: 40%;
+  padding-top: 10%;
+  /* background-color: red; */
+  /* height: 500px; */
+}
+.heater{
+  /* background-color: burlywood; */
+  padding-left: 20%;
+  padding-top: 1%;
+  height: 10vh;
+  /* position: absolute; */
+  margin-top: 30px;
+  position:sticky;
+  top:70px;
+}
+
+.heater input{
+  height: 50px;
+  width: 60%;
+  border: none;
+padding-left: 5%;
+ /* font-size: large; */
+font-weight: bold; 
+  border-radius: 30px 0px 0px 30px;
+}
+.heater input:active{
+  background-color: rgb(227, 229, 236);
+}
+
+.heater button{
+  border: none;
+  height: 50px;
+  font-size: large;
+  border-radius: 0px 30px 30px 0px;
+  background-color: black;
   color: white;
+  width: 20%;
+}
+.heater button:active{
+  background-color:red;
+  color: black;
+}
+.list{
+  background-color: rgb(178, 184, 202);
+  width: 69%;
+  margin-left: 15%;
+  border-radius: 30px;
+  height: 20vh;
+  margin-top: 1% !important;
+  overflow: hidden;
+  border: 1px solid black;
+  display: flex !important;
+  justify-content: space-between;
+  font-weight: bolder;
+  padding: 15px;
+  align-items: center !important;
+
+  /* text-align: end; */
+
+}
+.listparagaraph{
+  /* background-color: red; */
+  width: 20vw;
+  overflow-wrap: break-word;
+}
+.icons{
+  display: flex;
+  justify-content: space-around !important;
+  /* background-color: antiquewhite; */
+  width: 10vw;
+}
+.editer{
+  height: 3vh !important;
+  width: 3vw !important;
+  border-radius: 50%;
+  /* background-color: brown; */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:1100px) {
+  .count h5{
+    font-size:medium;
+    /* color: red; */
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width:900px) {
+  .list{
+    margin-left: 14%;
+  }
+  .count h5{
+    font-size:smaller;
+  }
+}
+@media (max-width:800px) {
+ .list{ margin-left: 13%;
+}
+.count h5{
+  font-size: small;
+}
+}
+@media (max-width:700px) {
+ 
+  #root{
+    width: 100vw;
+    margin: 0%;
+  }
+.list{
+  margin-left: 14.5%;
+}
+.icons{
+  margin-right: 3%;
+  /* background-color: red; */
+  gap: 15%;
+}
+  .count{
+    width: 100vw;
+    margin: 0%;
+  }
+  .count h5{
+    font-size:smaller;
+    width: 20%;
+    padding: auto;
+  }
+  .listparagaraph{
+    font-size:small;
+  }
+}
+@media (max-width:620px) {
+  .list{
+    margin-left: 14%;
+  }
+}
+@media (max-width:550px) {
+  .list{
+margin-left: 13.5%;
+  }
+}
+@media (max-width:500px) {
+  body{
+    /* background-color: red; */
+  }
+  .list{
+    height: 9.8%;
+    /* background-color: red; */
+    margin-left: 13%;
+  }
+  .count h5{
+    width: 20%;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .listparagaraph{
+    font-size:small;
+  }
+}
+@media (max-width:450px){
+  .list{
+    margin-left: 12%;
+  }
+ 
+}
+@media (max-width:350px){
+  .count h5{
+    margin-left: 1%;
   }
 }
